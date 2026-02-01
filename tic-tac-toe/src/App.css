@@ -1,42 +1,129 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.game {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  padding: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  min-height: 100vh;
+  margin: 0;
+  justify-content: center;
+}
+
+.game h1 {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  font-size: 2.8em;
+  margin: 0;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.game-board {
+  margin-top: 100px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  flex-shrink: 0;
+}
+
+.status {
+  margin-bottom: 25px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.board-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  font-weight: 900;
+  cursor: pointer;
+  background: #f5f5f5;
+  border: 2px solid #000;
+  padding: 0;
+  color: #000;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.square:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
 }
 
-.card {
-  padding: 2em;
+.square:active {
+  background: #d0d0d0;
 }
 
-.read-the-docs {
-  color: #888;
+.game-info {
+  margin-top: 100px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #000;
+  min-width: 350px;
+  flex-grow: 1;
+  max-width: 450px;
 }
+
+.game-info h2 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.game-info ol {
+  padding-left: 20px;
+  list-style: decimal;
+  margin: 0;
+}
+
+.game-info li {
+  margin: 12px 0;
+  color: #333;
+}
+
+.game-info button {
+  background: #000;
+  border: 2px solid #000;
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.game-info button:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.game-info button:active {
+  background: #000;
+}
+
+
